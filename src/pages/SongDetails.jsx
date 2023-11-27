@@ -16,6 +16,7 @@ const SongDetails = () => {
 
   if (isFetchingSongDetails && isFetchinRelatedSongs) return <Loader title="Searching song details" />;
 
+  // eslint-disable-next-line no-console
   console.log(songData);
 
   if (error) return <Error />;

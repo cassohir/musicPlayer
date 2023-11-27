@@ -15,6 +15,7 @@ const CountryTracks = () => {
     axios
       .get(`https://geo.ipify.org/api/v2/country?apiKey=${import.meta.env.VITE_GEO_API_KEY}`)
       .then((res) => setCountry(res?.data?.location.country))
+      // eslint-disable-next-line no-console
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, [country]);
